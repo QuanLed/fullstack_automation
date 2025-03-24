@@ -1,0 +1,98 @@
+Câu 1:
+git commit --amend
+ - là 1 lệnh git để chỉnh sửa commit gần nhất, như: sửa message, thêm hoặc xóa file. Lưu ý không nên sửa commit đã được đẩy lên remote repository.
+
+git commit --amend -m<message>
+ - là lệnh git sửa message của commit gần nhất
+
+git restore --staged <file>
+ - là lệnh git dùng để loại bỏ 1 file khỏi khu vực staging, những thay đổi trong file này vẫn được lưu ở working directory.
+
+git reset HEAD~1
+ - là lệnh để chuyển nội dung các file về commit ngay trước đó
+
+Câu 2:
+a. Tạo file: file1, file2, file3
+- working directory: 
+- staging area:
+- git repository:
+- remote repository:
+
+b. git init
+- working directory: file1, file2, file3
+- staging area:
+- git repository:
+- remote repository:
+
+c. git commit -m”init project”
+- working directory: file1, file2, file3
+- staging area:
+- git repository:
+- remote repository:
+
+d. git add file1
+- working directory: file1, file2, file3
+- staging area: file1
+- git repository:
+- remote repository:
+
+e. git commit -m”add file”
+- working directory: file1, file2, file3
+- staging area: file1
+- git repository: file1
+- remote repository:
+
+f. git add .
+- working directory: file1, file2, file3
+- staging area: file1, file2, file3
+- git repository: file1
+- remote repository:
+
+g. git restore --staged file2
+- working directory: file1, file2, file3
+- staging area: file1, file3
+- git repository: file1
+- remote repository:
+
+h. git commit -m”add all files”
+- working directory: file1, file2, file3
+- staging area: file1, file3
+- git repository: file1, file3
+- remote repository:
+
+i. git reset HEAD~1
+- working directory: file1, file2, file3
+- staging area: file1, file3
+- git repository: file1
+- remote repository:
+
+Câu 3:
+a. git init
+- working directory: 
+- staging area:
+- git repository:
+- remote repository:
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt
+- working directory: file1.txt, file2.txt, oops/file3.txt
+- staging area:
+- git repository:
+- remote repository:
+
+c. Thêm vào file .gitignore : file1.txt và oops/
+- working directory: file1.txt, file2.txt, oops/file3.txt
+- staging area:
+- git repository:
+- remote repository:
+
+d. git add .
+- working directory: file1.txt, file2.txt, oops/file3.txt
+- staging area: file2.txt
+- git repository:
+- remote repository:
+
+e. git commit -m"init project"
+- working directory: file1.txt, file2.txt, oops/file3.txt
+- staging area: file2.txt
+- git repository: file2.txt
+- remote repository:
